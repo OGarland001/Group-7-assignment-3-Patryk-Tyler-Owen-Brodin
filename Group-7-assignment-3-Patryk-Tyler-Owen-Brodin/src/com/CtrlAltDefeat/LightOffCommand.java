@@ -1,0 +1,27 @@
+package com.CtrlAltDefeat;
+
+public class LightOffCommand  implements Command{
+
+	Light light;
+	
+	
+	public LightOffCommand(	Light light) {
+		
+		this.light = light;
+	}
+	
+	@Override
+	public void execuet() {
+		
+		light.off();
+		
+	}
+	
+	@Override
+	public void undo()
+	{
+		System.out.println("Light off has been undone");
+		light.on();
+	}
+	
+}
