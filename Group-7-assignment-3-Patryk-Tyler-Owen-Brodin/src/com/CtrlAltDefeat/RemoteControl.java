@@ -6,7 +6,7 @@ public class RemoteControl {
 	private Command slotOnCommand;
 	private Command slotOffCommand;
 	private Command lastCommand;
-	private Command noCommand;
+	
 	
 	public void setCommand(Command slotOnCommand, Command slotOffCommand) {
 		this.slotOnCommand = slotOnCommand;
@@ -33,7 +33,8 @@ public class RemoteControl {
 	}
 	
 	void resetButtonPressed() {
-		noCommand.reset();
+		slotOffCommand.reset();
+		slotOnCommand.reset();
 	}
 	
 
