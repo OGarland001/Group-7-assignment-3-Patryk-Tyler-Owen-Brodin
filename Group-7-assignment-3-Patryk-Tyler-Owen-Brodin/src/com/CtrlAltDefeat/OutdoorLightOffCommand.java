@@ -24,4 +24,5 @@ public class OutdoorLightOffCommand implements Command {
 		light.on();
 	}
 	
+	
 }

@@ -24,4 +24,9 @@ public class LightOffCommand  implements Command{
 		light.on();
 	}
 	
+	@Override
+	public void reset()
+	{
+		System.out.println("LightsOff Button Reset");
+	}
 }
