@@ -8,7 +8,7 @@ public class GarageDoorOpenCommand implements Command {
 	}
 	
 	@Override
-	public void execuet() {
+	public void execute() {
 		
 		garageDoor.open();
 		
