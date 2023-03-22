@@ -29,4 +29,5 @@ public class OutdoorLightOffCommand implements Command {
 		System.out.println("OutdoorLightOff Button Reset");		
 	}
 	
+	
 }

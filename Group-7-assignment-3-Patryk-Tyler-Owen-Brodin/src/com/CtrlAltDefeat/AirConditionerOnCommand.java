@@ -26,7 +26,6 @@ public class AirConditionerOnCommand implements Command {
 	@Override
 	public void reset()
 	{
-		System.out.println("Air Conditioner off has been reset");
-		airConditioner.off();
+		System.out.println("AirConditionerOn Button Reset");
 	}
 }
