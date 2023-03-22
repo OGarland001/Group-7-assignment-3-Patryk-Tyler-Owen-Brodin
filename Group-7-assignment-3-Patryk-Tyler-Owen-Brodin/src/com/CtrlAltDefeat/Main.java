@@ -21,23 +21,46 @@ public class Main {
 		
 		int Selectionchoice = 0;
 		
+		System.out.println("   ___________________________________________________");
+		System.out.println("  /                                                   \\");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   |      1 AC ON       |   |      2 AC OFF      |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   |    3 GARAGE OPEN   |   |   4 GARAGE CLOSE   |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   | 5 LIV RM LIGHT ON  |   | 6 LIV RM LIGHT OFF |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   | 7 OUT DR LIGHT ON  |   | 8 OUT DR LIGHT OFF |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   | 9   ALL LIGHT ON   |   | 10  ALL LIGHT ON   |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   | 11    UNUSED       |   | 12     UNUSED      |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println(" |    ____________________     ____________________    |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |   | 13     UNDO        |   | 14      RESET      |   |");
+		System.out.println(" |   |                    |   |                    |   |");
+		System.out.println(" |    --------------------     --------------------    |");
+		System.out.println("  \\___________________________________________________/");
 		
-		System.out.println("------ REMOTE CONTROL ------");
-		System.out.println("1. Air Conditioner ON");
-		System.out.println("2. Air Conditioner OFF");
-		System.out.println("3. Garage Door Open");
-		System.out.println("4. Garage Door Close");
-		System.out.println("5. Living Room Light ON");
-		System.out.println("6. Living Room Light OFF");
-		System.out.println("7. Outdoor Light ON");
-		System.out.println("8. Outdoor Light OFF");
-		System.out.println("9. All Lights ON");
-		System.out.println("10. All Lights OFF");
-		System.out.println("11. Unused ON");
-		System.out.println("12. Unused OFF");
-		System.out.println("13. Undo");
-		System.out.println("14. Reset");
-		System.out.println("15. Quit");
+		System.out.println("Please enter the correspodning number to the above buttons and use 15 to Quit");
 		
 		boolean running = true;
 		
@@ -101,7 +124,7 @@ public class Main {
 		
 		//for light off here
 		
-		Command lightOffCommand = new LightOffCommand(light);
+		//Command lightOffCommand = new LightOffCommand(light);
 		
 		
 		//remoteControl.setCommand(lightOffCommand);
