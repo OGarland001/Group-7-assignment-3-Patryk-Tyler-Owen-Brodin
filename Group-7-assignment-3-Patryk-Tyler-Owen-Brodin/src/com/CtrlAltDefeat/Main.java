@@ -60,7 +60,7 @@ public class Main {
 		System.out.println(" |    --------------------     --------------------    |");
 		System.out.println("  \\___________________________________________________/");
 		
-		System.out.println("Please enter the correspodning number to the above buttons and use 15 to Quit");
+		System.out.println("Please enter the corresponding number to the above buttons and use 15 to Quit");
 		
 		boolean running = true;
 		
