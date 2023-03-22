@@ -9,7 +9,7 @@ public class LivingRoomLightOnCommand implements Command{
 	}
 	
 	@Override
-	public void execuet() {
+	public void execute() {
 		
 		light.on();
 		

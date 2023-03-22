@@ -22,16 +22,16 @@ public class RemoteControl {
 	
 	void onButtonPressed() {
 		lastCommand = slotOnCommand;
-		slotOnCommand.execuet();
+		slotOnCommand.execute();
 	}
 	
 	void offButtonPressed() {
 		lastCommand = slotOffCommand;
-		slotOffCommand.execuet();
+		slotOffCommand.execute();
 	}
 	
 	void undoButtonPressed() {
-		lastCommand.execuet();
+		lastCommand.execute();
 	}
 
 	

@@ -11,7 +11,7 @@ public class LivingRoomLightOffCommand implements Command {
 	}
 	
 	@Override
-	public void execuet() {
+	public void execute() {
 		
 		light.off();
 		

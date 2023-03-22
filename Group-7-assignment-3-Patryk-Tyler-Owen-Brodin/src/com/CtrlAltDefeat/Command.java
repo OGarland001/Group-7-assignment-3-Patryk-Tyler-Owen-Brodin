@@ -2,7 +2,7 @@ package com.CtrlAltDefeat;
 
 public interface Command {
 	
-	void execuet();
+	void execute();
 	
 	void undo();
 
