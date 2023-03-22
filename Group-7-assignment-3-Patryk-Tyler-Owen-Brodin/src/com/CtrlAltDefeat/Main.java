@@ -6,16 +6,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Command Design Pattern ..");
-		
-		
+				
 		RemoteControl remoteControl = new RemoteControl();
-		
-		//Light light = new Light();
 		AirConditioner airConditioner = new AirConditioner();
 		LivingRoomLight livingRoomLight = new LivingRoomLight();
 		OutdoorLight outdoorLight = new OutdoorLight();
 		GarageDoor garageDoor = new GarageDoor();
-		
 		
 		Command airConditonerONCommand = new AirConditionerOnCommand(airConditioner);
 		Command airConditonerOFFCommand = new AirConditionerOffCommand(airConditioner);
@@ -25,14 +21,9 @@ public class Main {
 		Command livingRoomLightOFFCommand = new LightOffCommand(livingRoomLight);
 		Command outdoorLightONCommand = new LightOnCommand(outdoorLight);
 		Command outdoorLightOFFCommand = new LightOffCommand(outdoorLight);
-		//Command allLightOFFCommand = new LightOnComman();
 		Command allLightsOFFCommand = new AllLightsOffCommand(livingRoomLight, outdoorLight);
 		Command allLightsONCommand = new AllLightsOnCommand(livingRoomLight, outdoorLight);
-		
-		
-		//Command LivingRoomLightONCommand
-		//Command lightOnCommand = new LightOnCommand(light);
-		
+
 		int Selectionchoice = 0;
 		
 		System.out.println("   ___________________________________________________");
@@ -137,9 +128,11 @@ public class Main {
 			    break;
 		  case 11:
 			    // unused Slot to be implemented later
+				System.out.println("Unused Slot-No Content");
 			    break;
 		  case 12:
 			    // unused Slot to be implemented later
+				System.out.println("Unused Slot-No Content");
 			    break;
 		  case 13:
 			    // undo command
@@ -152,6 +145,7 @@ public class Main {
 			  
 			    break;
 		  case 14:
+			  System.out.println("Remote Buttons Reset");
 			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
 			  remoteControl.resetButtonPressed();
 			  
@@ -176,21 +170,6 @@ public class Main {
 		    break;
 		}
 	}
-		
-		//remoteControl.setCommand(lightOnCommand);
-		
-		
-		//remoteControl.buttonPressed();
-		
-		//for light off here
-		
-		//Command lightOffCommand = new LightOffCommand(light);
-		
-		
-		//remoteControl.setCommand(lightOffCommand);
-		
-		
-		//remoteControl.buttonPressed();
 		userInput.close();
 	}
 

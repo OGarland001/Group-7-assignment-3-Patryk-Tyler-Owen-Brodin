@@ -12,9 +12,7 @@ public class OutdoorLightOffCommand implements Command {
 	
 	@Override
 	public void execute() {
-		
 		light.off();
-		
 	}
 	
 	@Override

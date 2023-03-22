@@ -3,8 +3,7 @@ package com.CtrlAltDefeat;
 public class LightOffCommand  implements Command{
 
 	Light light;
-	
-	
+		
 	public LightOffCommand(	Light light) {
 		
 		this.light = light;
@@ -12,9 +11,7 @@ public class LightOffCommand  implements Command{
 	
 	@Override
 	public void execute() {
-		
 		light.off();
-		
 	}
 	
 	@Override
