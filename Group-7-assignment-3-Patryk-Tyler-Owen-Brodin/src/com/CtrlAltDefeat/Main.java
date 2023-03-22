@@ -18,7 +18,7 @@ public class Main {
 		
 		//remoteControl.buttonPressed();
 		
-		//for light off
+		//for light off here
 		
 		Command lightOffCommand = new LightOffCommand(light);
 		
