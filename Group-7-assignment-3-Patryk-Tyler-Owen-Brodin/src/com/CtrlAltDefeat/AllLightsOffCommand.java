@@ -22,4 +22,9 @@ public class AllLightsOffCommand implements Command{
 		light2.on();
 	}
 
+	@Override
+	public void reset() {
+		System.out.println("AllLightsOff Button Reset");		
+	}
+
 }
