@@ -21,4 +21,11 @@ public class LivingRoomLightOnCommand implements Command{
 		System.out.println("Light on has been undone");
 		light.off();
 	}
+	
+	@Override
+	public void reset()
+	{
+		System.out.println("Light on has been reset");
+		light.off();
+	}
 }

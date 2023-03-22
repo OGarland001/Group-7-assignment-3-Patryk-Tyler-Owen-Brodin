@@ -20,4 +20,11 @@ public class GarageDoorOpenCommand implements Command {
 		System.out.println("Garage Door open has been undone");
 		garageDoor.close();
 	}
+	
+	@Override
+	public void reset()
+	{
+		System.out.println("Garage Door open has been reset");
+		garageDoor.close();
+	}
 }
