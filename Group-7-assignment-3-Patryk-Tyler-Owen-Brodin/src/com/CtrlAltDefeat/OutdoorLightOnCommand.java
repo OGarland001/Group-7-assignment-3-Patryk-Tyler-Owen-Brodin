@@ -21,4 +21,9 @@ public class OutdoorLightOnCommand implements Command{
 		System.out.println("Light on has been undone");
 		light.off();
 	}
+
+	@Override
+	public void reset() {
+		System.out.println("OutdoorLightOn Button Reset");				
+	}
 }
