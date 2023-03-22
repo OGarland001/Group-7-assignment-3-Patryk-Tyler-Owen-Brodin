@@ -24,4 +24,11 @@ public class LightOnCommand  implements Command{
 		light.off();
 	}
 	
+	@Override
+	public void reset()
+	{
+		System.out.println("Light on has been reset");
+		light.off();
+	}
+	
 }

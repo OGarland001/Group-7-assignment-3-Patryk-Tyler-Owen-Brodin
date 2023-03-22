@@ -22,4 +22,11 @@ public class AirConditionerOnCommand implements Command {
 		System.out.println("Air Conditioner off has been undone");
 		airConditioner.off();
 	}
+	
+	@Override
+	public void reset()
+	{
+		System.out.println("Air Conditioner off has been reset");
+		airConditioner.off();
+	}
 }
