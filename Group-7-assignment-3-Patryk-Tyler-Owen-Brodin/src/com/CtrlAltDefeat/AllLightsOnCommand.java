@@ -4,7 +4,7 @@ public class AllLightsOnCommand implements Command{
 	LivingRoomLight light1;
 	OutdoorLight light2;
 	
-	public void LightOnCommand(LivingRoomLight light1, OutdoorLight light2) {
+	public AllLightsOnCommand(LivingRoomLight light1, OutdoorLight light2) {
 		this.light1 = light1;
 		this.light2 = light2;
 	}

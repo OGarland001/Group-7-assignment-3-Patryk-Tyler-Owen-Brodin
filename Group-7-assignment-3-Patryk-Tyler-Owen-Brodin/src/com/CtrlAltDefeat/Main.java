@@ -1,5 +1,7 @@
 package com.CtrlAltDefeat;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,8 +16,20 @@ public class Main {
 		OutdoorLight outdoorLight = new OutdoorLight();
 		GarageDoor garageDoor = new GarageDoor();
 		
+		
 		Command airConditonerONCommand = new AirConditionerOnCommand(airConditioner);
-		Command airConditonerOFFCommand = new AirConditionerOnCommand(airConditioner);
+		Command airConditonerOFFCommand = new AirConditionerOffCommand(airConditioner);
+		Command garageDoorOpenCommmand = new GarageDoorOpenCommand(garageDoor);
+		Command garageDoorCloseCommand = new GarageDoorCloseCommand(garageDoor);
+		Command livingRoomLightONCommand = new LightOnCommand(livingRoomLight);
+		Command livingRoomLightOFFCommand = new LightOffCommand(livingRoomLight);
+		Command outdoorLightONCommand = new LightOnCommand(outdoorLight);
+		Command outdoorLightOFFCommand = new LightOffCommand(outdoorLight);
+		//Command allLightOFFCommand = new LightOnComman();
+		Command allLightsOFFCommand = new AllLightsOffCommand(livingRoomLight, outdoorLight);
+		Command allLightsONCommand = new AllLightsOnCommand(livingRoomLight, outdoorLight);
+		
+		
 		//Command LivingRoomLightONCommand
 		//Command lightOnCommand = new LightOnCommand(light);
 		
@@ -63,57 +77,103 @@ public class Main {
 		System.out.println("Please enter the correspodning number to the above buttons and use 15 to Quit");
 		
 		boolean running = true;
+		Scanner userInput = new Scanner(System.in);
 		
 		while(running) {
+			
+		Selectionchoice = userInput.nextInt();
+		
 		switch(Selectionchoice) {
+		
 		  case 1:
-		    // code block
+			  
+			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
+			  remoteControl.onButtonPressed();
+		    
 		    break;
 		  case 2:
-		    // code block
+			  
+			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
+			  remoteControl.offButtonPressed();
+			  
 		    break;
 		  case 3:
+			  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
+			  remoteControl.onButtonPressed();
 			    // code block
 			    break;
 		  case 4:
+			  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
+			  remoteControl.offButtonPressed();
 			    // code block
 			    break;
 		  case 5:
-			    // code block
+			  
+			  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
+			  remoteControl.onButtonPressed();
+			  
 			    break;
 		  case 6:
-			    // code block
+			  
+			  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
+			  remoteControl.offButtonPressed();
+			  
 			    break;
 		  case 7:
-			    // code block
+			  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
+			  remoteControl.onButtonPressed();
 			    break;
 		  case 8:
-			    // code block
+			  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
+			  remoteControl.offButtonPressed();
 			    break;
 		  case 9:
-			    // code block
+			  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
+			  remoteControl.onButtonPressed();
 			    break;
 		  case 10:
-			    // code block
+			  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
+			  remoteControl.offButtonPressed();
 			    break;
 		  case 11:
-			    // code block
+			    // unused Slot to be implemented later
 			    break;
 		  case 12:
-			    // code block
+			    // unused Slot to be implemented later
 			    break;
 		  case 13:
-			    // code block
+			    // undo command
+			  try {
+				  remoteControl.undoButtonPressed();
+			  }
+			  catch (Exception e) {
+				System.out.println("No Button Pressed");
+			  }
+			  
 			    break;
 		  case 14:
-			    // code block
+			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
+			  remoteControl.resetButtonPressed();
+			  
+			  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
+			  remoteControl.resetButtonPressed();
+		
+			  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
+			  remoteControl.resetButtonPressed();
+			  
+			  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
+			  remoteControl.resetButtonPressed();
+		
+			  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
+			  remoteControl.resetButtonPressed(); 
 			    break;
 		  case 15:
 				System.out.println("Existing Remote Application...");
 				running = false;
 			    break;
 		  default:
-		    // code block
+		    System.out.println("Invalid Button Choice");
+		    break;
 		}
 	}
 		
@@ -131,7 +191,7 @@ public class Main {
 		
 		
 		//remoteControl.buttonPressed();
-
+		userInput.close();
 	}
 
 }

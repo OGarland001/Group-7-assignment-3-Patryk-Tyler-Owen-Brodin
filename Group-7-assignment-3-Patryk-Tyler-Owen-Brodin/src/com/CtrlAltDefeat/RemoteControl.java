@@ -8,11 +8,10 @@ public class RemoteControl {
 	private Command lastCommand;
 	private Command noCommand;
 	
-	public void setCommand(Command slotOnCommand, Command slotOffCommand, Command lastCommand, Command noCommand) {
+	public void setCommand(Command slotOnCommand, Command slotOffCommand) {
 		this.slotOnCommand = slotOnCommand;
 		this.slotOffCommand = slotOffCommand;
-		this.lastCommand = lastCommand;
-		this.noCommand = noCommand;
+		
 	}
 	
 	public Command getCommand() {
@@ -30,11 +29,11 @@ public class RemoteControl {
 	}
 	
 	void undoButtonPressed() {
-		lastCommand.execute();
+		lastCommand.undo();
 	}
 	
 	void resetButtonPressed() {
-		noCommand.execute();
+		noCommand.reset();
 	}
 	
 
