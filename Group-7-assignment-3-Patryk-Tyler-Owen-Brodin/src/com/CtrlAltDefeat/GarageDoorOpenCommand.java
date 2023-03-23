@@ -1,17 +1,18 @@
 package com.CtrlAltDefeat;
 
-public class GarageDoorOpenCommand implements Command {
+public class GarageDoorOpenCommand implements Command 
+{
 	GarageDoor garageDoor;
 	
-	public GarageDoorOpenCommand(GarageDoor garageDoor ) {
+	public GarageDoorOpenCommand(GarageDoor garageDoor ) 
+	{
 		this.garageDoor =garageDoor;
 	}
 	
 	@Override
-	public void execute() {
-		
+	public void execute() 
+	{
 		garageDoor.open();
-		
 	}
 	
 	@Override
@@ -24,6 +25,7 @@ public class GarageDoorOpenCommand implements Command {
 	@Override
 	public void reset()
 	{
+		garageDoor = null;
 		System.out.println("GarageDoorOff Button Reset");
 	}
 }

@@ -1,18 +1,18 @@
 package com.CtrlAltDefeat;
 
-public class OutdoorLightOnCommand implements Command{
+public class OutdoorLightOnCommand implements Command
+{
 	OutdoorLight light;
-	
-	
-	public void LightOnCommand(OutdoorLight light) {
+		
+	public void LightOnCommand(OutdoorLight light) 
+	{
 		this.light = light;
 	}
 	
 	@Override
-	public void execute() {
-		
+	public void execute() 
+	{
 		light.on();
-		
 	}
 	
 	@Override
@@ -23,7 +23,9 @@ public class OutdoorLightOnCommand implements Command{
 	}
 
 	@Override
-	public void reset() {
+	public void reset()
+	{
+		light = null;
 		System.out.println("OutdoorLightOn Button Reset");				
 	}
 }

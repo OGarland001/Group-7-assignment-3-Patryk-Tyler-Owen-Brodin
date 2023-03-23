@@ -1,15 +1,14 @@
 package com.CtrlAltDefeat;
 
-public class AirConditioner {
-
-    public void on() {
-		
+public class AirConditioner 
+{
+    public void on() 
+    {
 		System.out.println("Turn on the Air Conditioner");
 	}
 	
-	public void off() {
-		
+	public void off() 
+	{		
 		System.out.println("Turn off the Air Conditioner");
 	}
-	
 }

@@ -1,42 +1,42 @@
 package com.CtrlAltDefeat;
 
-public class RemoteControl {
-
-	//For assignment for reset it means that all buttons on the remote have no command. So like we added an undo to each command we should add a noCommand to each one
+public class RemoteControl 
+{
 	private Command slotOnCommand;
 	private Command slotOffCommand;
 	private Command lastCommand;
-	
-	
-	public void setCommand(Command slotOnCommand, Command slotOffCommand) {
+		
+	public void setCommand(Command slotOnCommand, Command slotOffCommand) 
+	{
 		this.slotOnCommand = slotOnCommand;
 		this.slotOffCommand = slotOffCommand;
-		
 	}
 	
-	public Command getCommand() {
+	public Command getCommand() 
+	{
 		return lastCommand;
 	}
 	
-	void onButtonPressed() {
+	void onButtonPressed() 
+	{
 		lastCommand = slotOnCommand;
 		slotOnCommand.execute();
 	}
 	
-	void offButtonPressed() {
+	void offButtonPressed() 
+	{
 		lastCommand = slotOffCommand;
 		slotOffCommand.execute();
 	}
 	
-	void undoButtonPressed() {
+	void undoButtonPressed() 
+	{
 		lastCommand.undo();
 	}
 	
-	void resetButtonPressed() {
+	void resetButtonPressed() 
+	{
 		slotOffCommand.reset();
 		slotOnCommand.reset();
-	}
-	
-
-	
+	}	
 }

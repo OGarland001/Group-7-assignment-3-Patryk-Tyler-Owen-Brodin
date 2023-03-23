@@ -1,20 +1,18 @@
 package com.CtrlAltDefeat;
 
-public class LightOnCommand  implements Command{
-
+public class LightOnCommand  implements Command
+{
 	Light light;
 	
-	
-	public LightOnCommand(Light light) {
-		
+	public LightOnCommand(Light light)
+	{
 		this.light = light;
 	}
 	
 	@Override
-	public void execute() {
-		
+	public void execute() 
+	{
 		light.on();
-		
 	}
 	
 	@Override
@@ -27,7 +25,7 @@ public class LightOnCommand  implements Command{
 	@Override
 	public void reset()
 	{
+		light = null;
 		System.out.println("LightsOn Button Reset");
 	}
-	
 }

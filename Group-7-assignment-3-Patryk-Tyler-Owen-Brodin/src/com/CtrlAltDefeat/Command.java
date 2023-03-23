@@ -1,11 +1,10 @@
 package com.CtrlAltDefeat;
 
-public interface Command {
-	
+public interface Command 
+{
 	void execute();
 	
 	void undo();
 	
 	void reset();
-
 }

@@ -1,14 +1,17 @@
 package com.CtrlAltDefeat;
 
-public class LivingRoomLightOnCommand implements Command{
+public class LivingRoomLightOnCommand implements Command
+{
 	LivingRoomLight light;
 		
-	public void LightOnCommand(LivingRoomLight light) {
+	public void LightOnCommand(LivingRoomLight light) 
+	{
 		this.light = light;
 	}
 	
 	@Override
-	public void execute() {
+	public void execute() 
+	{
 		light.on();
 	}
 	
@@ -22,6 +25,7 @@ public class LivingRoomLightOnCommand implements Command{
 	@Override
 	public void reset()
 	{
+		light = null;
 		System.out.println("Living Room ligths On Button Reset");
 	}
 }

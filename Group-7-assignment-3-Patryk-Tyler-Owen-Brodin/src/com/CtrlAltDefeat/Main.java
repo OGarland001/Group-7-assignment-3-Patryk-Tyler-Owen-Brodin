@@ -2,9 +2,11 @@ package com.CtrlAltDefeat;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		System.out.println("Command Design Pattern ..");
 				
 		RemoteControl remoteControl = new RemoteControl();
@@ -77,54 +79,114 @@ public class Main {
 		switch(Selectionchoice) {
 		
 		  case 1:
-			  
-			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
-			  remoteControl.onButtonPressed();
-		    
+			  try 
+			  {
+				  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
+				  remoteControl.onButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 		    break;
 		  case 2:
-			  
-			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
-			  remoteControl.offButtonPressed();
-			  
+			  try 
+			  {
+				  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
+				  remoteControl.offButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 		    break;
 		  case 3:
-			  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
-			  remoteControl.onButtonPressed();
-			    // code block
+			  try 
+			  {
+				  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
+				  remoteControl.onButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 4:
-			  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
-			  remoteControl.offButtonPressed();
-			    // code block
+			  try 
+			  {
+				  remoteControl.setCommand(garageDoorOpenCommmand, garageDoorCloseCommand);
+				  remoteControl.offButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 5:
-			  
-			  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
-			  remoteControl.onButtonPressed();
-			  
+			  try 
+			  {
+				  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
+				  remoteControl.onButtonPressed();  
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 6:
-			  
-			  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
-			  remoteControl.offButtonPressed();
-			  
+			  try 
+			  {
+				  remoteControl.setCommand(livingRoomLightONCommand, livingRoomLightOFFCommand);
+				  remoteControl.offButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 7:
-			  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
-			  remoteControl.onButtonPressed();
+			  try 
+			  {
+				  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
+				  remoteControl.onButtonPressed();  
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 8:
-			  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
-			  remoteControl.offButtonPressed();
+			  try 
+			  {
+				  remoteControl.setCommand(outdoorLightONCommand, outdoorLightOFFCommand);
+				  remoteControl.offButtonPressed();
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 9:
-			  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
-			  remoteControl.onButtonPressed();
+			  try 
+			  {
+				  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
+				  remoteControl.onButtonPressed();  
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 10:
-			  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
-			  remoteControl.offButtonPressed();
+			  try 
+			  {
+				  remoteControl.setCommand(allLightsONCommand,allLightsOFFCommand);
+				  remoteControl.offButtonPressed(); 
+			  }
+			  catch (Exception e) 
+			  {
+				System.out.println("No Content");
+			  }
 			    break;
 		  case 11:
 			    // unused Slot to be implemented later
@@ -134,10 +196,12 @@ public class Main {
 			    break;
 		  case 13:
 			    // undo command
-			  try {
+			  try 
+			  {
 				  remoteControl.undoButtonPressed();
 			  }
-			  catch (Exception e) {
+			  catch (Exception e) 
+			  {
 				System.out.println("No Button Pressed");
 			  }
 			  
@@ -169,5 +233,4 @@ public class Main {
 	}
 		userInput.close();
 	}
-
 }

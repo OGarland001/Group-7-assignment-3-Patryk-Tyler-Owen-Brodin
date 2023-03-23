@@ -1,7 +1,7 @@
 package com.CtrlAltDefeat;
 
-public class AirConditionerOnCommand implements Command {
-
+public class AirConditionerOnCommand implements Command 
+{
 	AirConditioner airConditioner;
 	
 	public AirConditionerOnCommand(AirConditioner airConditioner)
@@ -10,10 +10,9 @@ public class AirConditionerOnCommand implements Command {
 	}
 	
 	@Override
-	public void execute() {
-		
+	public void execute() 
+	{		
 		airConditioner.on();
-		
 	}
 	
 	@Override
@@ -26,6 +25,7 @@ public class AirConditionerOnCommand implements Command {
 	@Override
 	public void reset()
 	{
+		airConditioner = null;
 		System.out.println("AirConditionerOn Button Reset");
 	}
 }
