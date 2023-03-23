@@ -128,11 +128,9 @@ public class Main {
 			    break;
 		  case 11:
 			    // unused Slot to be implemented later
-				System.out.println("Unused Slot-No Content");
 			    break;
 		  case 12:
 			    // unused Slot to be implemented later
-				System.out.println("Unused Slot-No Content");
 			    break;
 		  case 13:
 			    // undo command
@@ -145,7 +143,6 @@ public class Main {
 			  
 			    break;
 		  case 14:
-			  System.out.println("Remote Buttons Reset");
 			  remoteControl.setCommand(airConditonerONCommand, airConditonerOFFCommand);
 			  remoteControl.resetButtonPressed();
 			  
